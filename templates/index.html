@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="form_input">
+    <form >
+        <div class="row">
+          <div class="col">
+          <input type="text" class="form-control" placeholder="Product number">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Quantity of products">
+          </div>
+          <input type="submit" class="btn btn-primary">
+        </div>
+      </form>
+</div>
+<hr>
+<div class="card" style="width: 20em;">
+    <img class="card-img-top" src="https://almacen.do/wp-content/uploads/2020/03/Doritos-Nachos-Cheese-110-g-Front.jpg" width="100px" height="200px" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text"><b>Product:</b></p>
+      <p class="card-text"><b>Price:</b></p>
+      <p class="card-text"><b>Amount:</b></p>
+    </div>
+</div>
+    <div class="card" style="width: 20em;">
+        <img class="card-img-top" src="https://colmado.com.do/3306-large_default/papitas-lay-s-clasica-87g.jpg" width="100px" height="200px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>Product:</b></p>
+          <p class="card-text"><b>Price:</b></p>
+          <p class="card-text"><b>Amount:</b></p>
+        </div>
+    </div>
+    <div class="card" style="width: 20em;">
+        <img class="card-img-top" src="https://colmado.com.do/3306-large_default/papitas-lay-s-clasica-87g.jpg" width="100px" height="200px" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text"><b>Product:</b></p>
+          <p class="card-text"><b>Price:</b></p>
+          <p class="card-text"><b>Amount:</b></p>
+        </div>
+    </div>
+
+    {% endblock %}

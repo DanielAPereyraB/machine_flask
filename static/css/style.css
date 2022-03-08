@@ -1,0 +1,24 @@
+h4{
+    float: right; 
+    margin-top: 10px; 
+    margin-left: 5px;
+}
+
+.card{
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.form_input{
+    margin-top: 50px;
+}
+
+.create{
+    width: 100px;
+    margin-top: 10px; 
+    margin-left: 20px;
+    justify-content: end;
+
+
+}
