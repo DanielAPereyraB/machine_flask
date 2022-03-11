@@ -11,25 +11,53 @@
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
-    <nav class="nav  justify-content-center navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-            <img src="data:image/png;base64,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" width="50" height="50" class="d-inline-block align-top"  alt="">
-            <h4>Progressa Vending machine</h4>
-          </a>
-
-          <div class="create">
-            <button class="btn btn-outline-primary my-2 my-sm-0">Create</button>
-          </div>
-
+          <main>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a href="/" class="navbar-brand mb-0 h1">
+                        <img class="d-inline-block aling-top" src="https://global-uploads.webflow.com/5e157547d6f791d34ea4e2bf/6087f2b060c7a92408bac811_logo.svg" width="30px" height="30px">
+                        Progressa Vending machine
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item active">
+                                <a href="/" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a href="{{url_for('create')}}" class="nav-link text-blue">Create</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a href="{{url_for('product')}}" class="nav-link">Product</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </main>
       </nav>
     <div class="container">
         {% block content %} {% endblock %}
         </div>
 
+        <script>
+          $(document).ready( function () {
+              $('#product_table').DataTable({
+                "aLengthMenu":[[3,5,10,25,-1], [3,5,10,25,"All"]],
+                "iDisplayLength": 3
+              });
+            } );
+        </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
   </body>
 </html>

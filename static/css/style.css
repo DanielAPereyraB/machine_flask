@@ -1,8 +1,3 @@
-h4{
-    float: right; 
-    margin-top: 10px; 
-    margin-left: 5px;
-}
 
 .card{
     float: left;
@@ -11,14 +6,14 @@ h4{
     margin-right: 20px;
 }
 .form_input{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .create{
     width: 100px;
     margin-top: 10px; 
     margin-left: 20px;
-    justify-content: end;
 
 
 }
+

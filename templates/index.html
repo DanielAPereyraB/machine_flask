@@ -1,44 +1,52 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div >
+    <h1 class="title mt-2 center center">Order a product</h1>
+</div>
+<div class="row">
 
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div> 
+{% endfor %}
+{% endif %}
+{% endwith %}
+<br>
+<div class="container">
 <div class="form_input">
-    <form >
+    <form action="{{url_for('order')}}" method="post">
         <div class="row">
           <div class="col">
-          <input type="text" class="form-control" placeholder="Product number">
+          <input type="text" class="form-control" name="Pnumber" placeholder="Product number">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="Quantity of products">
+            <input type="text" class="form-control" name="Pquantity" placeholder="Quantity of products">
           </div>
           <input type="submit" class="btn btn-primary">
         </div>
       </form>
 </div>
+</div>
 <hr>
-<div class="card" style="width: 20em;">
-    <img class="card-img-top" src="https://almacen.do/wp-content/uploads/2020/03/Doritos-Nachos-Cheese-110-g-Front.jpg" width="100px" height="200px" alt="Card image cap">
+{% for row in list_users %}
+
+<div class="card" style="width: 20em;" >
+    <img class="card-img-top" src={{row[5]}} width="100px" height="200px" alt="image {{row[1]}}">
     <div class="card-body">
-      <p class="card-text"><b>Product:</b></p>
-      <p class="card-text"><b>Price:</b></p>
-      <p class="card-text"><b>Amount:</b></p>
+      <p class="card-text"><b>Product:</b>{{row[1]}}</p>
+      <p class="card-text"><b>Price: </b>{{row[4]}}</p>
+      <p class="card-text"><b>Amount:</b>{{row[3]}}</p>
+      <p class="card-text"><b>Code:</b>{{row[2]}}</p>
     </div>
 </div>
-    <div class="card" style="width: 20em;">
-        <img class="card-img-top" src="https://colmado.com.do/3306-large_default/papitas-lay-s-clasica-87g.jpg" width="100px" height="200px" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"><b>Product:</b></p>
-          <p class="card-text"><b>Price:</b></p>
-          <p class="card-text"><b>Amount:</b></p>
-        </div>
-    </div>
-    <div class="card" style="width: 20em;">
-        <img class="card-img-top" src="https://colmado.com.do/3306-large_default/papitas-lay-s-clasica-87g.jpg" width="100px" height="200px" alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text"><b>Product:</b></p>
-          <p class="card-text"><b>Price:</b></p>
-          <p class="card-text"><b>Amount:</b></p>
-        </div>
-    </div>
+
+{% endfor %}
 
     {% endblock %}

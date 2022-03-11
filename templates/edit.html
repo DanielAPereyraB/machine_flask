@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="signup-form">
+            <form action='/update/{{pdata[0]}}' method="POST" class="mt-5 border p-4 bg-light shadow">
+                <h4 class="mb-5 text-secondary">Update Products</h4>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label>Id product<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="Pid" value="{{pdata[0]}}" placeholder="Id" disabled>
+                    </div>
+
+                    <div class="mb-3 col-md-6">
+                        <label>Product Name<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="Pname" value="{{pdata[1]}}" placeholder="Product Name">
+                    </div>
+
+                    <div class="mb-3 col-md-6">
+                        <label>Product Code<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="Pcode" value="{{pdata[2]}}" placeholder="Product Code">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label>Product Amount<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="Pamount"  value="{{pdata[3]}}" placeholder="Amount">
+                    </div>   
+                    <div class="mb-3 col-md-6">
+                        <label>Product Price<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="Pprice" value="{{pdata[4]}}"  placeholder="Price">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label>Product imgen</label>
+                        <input type="text" class="form-control" name="Pimg" value="{{pdata[5]}}" placeholder="Image">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-primary">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
